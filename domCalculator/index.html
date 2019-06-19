@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+    <body>
+        <H1 style = "color: #CCCCCC">
+            Calculator
+        </H1>
+        
+        <input type="text", id="firstNumber", oninput="calculate()">
+        <select id="operations", onchange="calculate()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <input type="text", id="secondNumber", oninput="calculate()">
+
+        <button id = leftButton, onclick="toRed()">toRed</button>
+        <button id = rightButton, onclick="toGreen()">toGreen</button>
+
+        <script src = "index.js"></script>
+    </body>
+</head>
