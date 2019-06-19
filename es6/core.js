@@ -3,19 +3,37 @@
 
 // Напишите функцию, которая принимает ФИО пользователя и возвращает
 // строку формата Имя Фамилия
-function fioToName() {}
+function fioToName(str) {
+    let [lastName, firstName] = str.split(" ");
+    return `${firstName} ${lastName}`;
+}
 
 // преобразуйте массив чисел так, чтобы в нем остались только
 // уникальные элементы
 // присмотритесь к коллекции "Set"
-function filterUnique() {}
+function filterUnique(arr) {
+    /*let set = new Set;
+    for (let i = 0; i < arr.length; i++) {
+        set.add(arr[i]);
+    }
+    let arr2;
+    let temp = 1;
+    set.forEach(value => {
+        arr2[temp] = value;
+    });
+    return */
+    let set = new Set(arr);
+    return Array.from(set);
+}
 
 // Задача: разница зарплат
 // в функцию приходит массив из n зарплат сотрудников фирмы
 // ваша задача определить, во сколько раз зарплата самого высокооплачиваемого
 // сотрудника превышает зарплату самого низкооплачиваемого
 // присмотритесь к методу .reduce
-function calculateSalaryDifference() {}
+function calculateSalaryDifference(salary) {
+    return Math.max(...salary) / Math.min(...salary);
+}
 
 // Задачка с собеседований fooBar
 // Напишите функцию, которая принимает n
